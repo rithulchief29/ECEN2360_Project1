@@ -1,13 +1,11 @@
 .text
 
-# Part 1.5: int atoi(char *str)
-# Optional minus, then decimal digits; no whitespace or plus sign.
 .global atoi
 atoi:
     movi r2, 0
-    movi r8, 0               # Negation flag.
+    movi r8, 0               
     ldbu r9, 0(r4)
-    movi r10, 45             # ASCII '-'.
+    movi r10, 45             
     bne r9, r10, .Latoi_loop
     movi r8, 1
     addi r4, r4, 1
@@ -15,7 +13,7 @@ atoi:
     ldbu r9, 0(r4)
     subi r9, r9, 48
     movi r10, 9
-    bltu r10, r9, .Latoi_done # Unsigned test rejects both < '0' and > '9'.
+    bltu r10, r9, .Latoi_done 
     muli r2, r2, 10
     add r2, r2, r9
     addi r4, r4, 1

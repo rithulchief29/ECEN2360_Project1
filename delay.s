@@ -1,10 +1,6 @@
 .text
 
-# Part 1.3: void delayNms(int n)
-# IMPORTANT: calibrate this starting value on the target CPUlator environment.
-# 100 is an UNCALIBRATED starting value, not a measured millisecond delay.
-# For nominal 100 MHz hardware under the assignment's cycle assumptions,
-# approximately 33332 iterations per millisecond is the starting estimate.
+# Part 1.3
 .equ DELAY_ITERATIONS_PER_MS, 100
 .global delayNms
 delayNms:
